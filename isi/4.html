@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayo Bercerita</title>
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+font-family:Arial;
+}
+
+#stage{
+width:100vw;
+height:100vh;
+background-size:cover;
+background-position:center;
+transition:1s;
+}
+
+.nav{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+background:rgba(255,255,255,.3);
+padding:12px;
+border-radius:30px;
+backdrop-filter:blur(8px);
+}
+
+button,a{
+padding:12px 18px;
+border:none;
+border-radius:20px;
+font-weight:bold;
+text-decoration:none;
+cursor:pointer;
+color:white;
+}
+
+.prev{background:#339af0;}
+.next{background:#51cf66;}
+.pause{background:#fab005;}
+.back{background:#ff6b6b;}
+
+.start{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,.4);
+}
+
+.start button{
+font-size:28px;
+padding:20px 35px;
+background:#51cf66;
+}
+</style>
+</head>
+<body>
+
+<div id="stage"></div>
+
+<div class="start" id="start">
+<button onclick="mulai()">▶ Mulai Cerita</button>
+</div>
+
+<div class="nav">
+<button class="prev" onclick="prev()">⏮</button>
+<button class="pause" onclick="pause()">⏸</button>
+<button class="next" onclick="next()">⏭</button>
+<a href="../index.html" class="back">⬅</a>
+</div>
+
+<audio id="audio"></audio>
+
+<script>
+const data=[
+["../assets/bg/1.png","../assets/hujan.mp3"],
+["../assets/bg/2.png","../assets/sekolah.mp3"],
+["../assets/bg/3.png","../assets/hening.mp3"],
+["../assets/bg/4.png","../assets/semangat.mp3"],
+["../assets/bg/5.png","../assets/ceria.mp3"],
+["../assets/bg/6.png","../assets/penutup.mp3"]
+];
+
+let i=0;
+
+const stage=document.getElementById("stage");
+const audio=document.getElementById("audio");
+
+function tampil(){
+stage.style.backgroundImage=`url(${data[i][0]})`;
+audio.src=data[i][1];
+audio.play();
+}
+
+function mulai(){
+document.getElementById("start").style.display="none";
+tampil();
+}
+
+function next(){
+if(i<data.length-1){i++; tampil();}
+}
+
+function prev(){
+if(i>0){i--; tampil();}
+}
+
+function pause(){
+if(audio.paused) audio.play();
+else audio.pause();
+}
+
+stage.style.backgroundImage=`url(${data[0][0]})`;
+</script>
+
+</body>
+</html>

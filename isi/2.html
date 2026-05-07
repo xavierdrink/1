@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR STORY 1 - Ayo Jaga Kebersihan</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+
+      font-family:Arial, Helvetica, sans-serif;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.75)
+        ),
+        url('../assets/Background.jpeg');
+
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+
+      color:white;
+
+      overflow-x:hidden;
+    }
+
+    /* Glow Background */
+    .blur{
+      position:fixed;
+      border-radius:50%;
+      filter:blur(120px);
+      opacity:0.35;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .blur1{
+      width:350px;
+      height:350px;
+      background:#00ffaa;
+      top:-100px;
+      left:-100px;
+    }
+
+    .blur2{
+      width:420px;
+      height:420px;
+      background:#00cfff;
+      bottom:-120px;
+      right:-120px;
+    }
+
+    /* Container */
+    .container{
+
+      position:relative;
+      z-index:2;
+
+      width:92%;
+      max-width:1300px;
+
+      margin:auto;
+
+      padding:
+        50px
+        0
+        140px;
+    }
+
+    /* Title */
+    .title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title h1{
+
+      font-size:68px;
+
+      color:#ffe66d;
+
+      text-shadow:
+        0 0 18px rgba(255,230,109,0.8),
+        0 0 35px rgba(255,230,109,0.5);
+
+      margin-bottom:15px;
+    }
+
+    .title h2{
+
+      font-size:42px;
+
+      color:white;
+
+      text-shadow:
+        0 0 10px rgba(255,255,255,0.45);
+    }
+
+    /* Story Card */
+    .story-box{
+
+      background:
+        rgba(255,255,255,0.10);
+
+      backdrop-filter:blur(10px);
+
+      border:
+        2px solid rgba(255,255,255,0.12);
+
+      border-radius:35px;
+
+      padding:40px;
+
+      margin-bottom:40px;
+
+      box-shadow:
+        0 0 25px rgba(0,0,0,0.35);
+
+      transition:0.25s ease;
+    }
+
+    .story-box:hover{
+
+      transform:translateY(-6px);
+
+      box-shadow:
+        0 0 35px rgba(0,255,170,0.2);
+    }
+
+    /* Section Title */
+    .story-box h3{
+
+      font-size:38px;
+
+      margin-bottom:25px;
+
+      color:#7dff8d;
+
+      text-shadow:
+        0 0 12px rgba(125,255,141,0.55);
+    }
+
+    /* Text */
+    .narator{
+
+      color:#ffe082;
+
+      font-size:27px;
+
+      line-height:1.9;
+
+      margin-bottom:20px;
+    }
+
+    .dialog{
+
+      font-size:27px;
+
+      line-height:1.9;
+
+      margin-left:18px;
+      margin-bottom:18px;
+
+      color:#ffffff;
+    }
+
+    .action{
+
+      font-size:23px;
+
+      color:#b0bec5;
+
+      margin-left:35px;
+      margin-bottom:18px;
+
+      font-style:italic;
+    }
+
+    /* Moral */
+    .moral{
+
+      background:
+        rgba(255,215,0,0.10);
+
+      border:
+        2px solid rgba(255,215,0,0.25);
+    }
+
+    /* Button */
+    .back-btn{
+
+      position:fixed;
+
+      bottom:30px;
+      left:50%;
+
+      transform:translateX(-50%);
+
+      z-index:10;
+
+      padding:
+        18px
+        55px;
+
+      border:none;
+      border-radius:18px;
+
+      font-size:28px;
+      font-weight:bold;
+
+      color:white;
+
+      cursor:pointer;
+
+      background:
+        linear-gradient(
+          to bottom,
+          #ffb347 0%,
+          #ff8c00 45%,
+          #cc6500 100%
+        );
+
+      box-shadow:
+        0 7px 0 #8f4300,
+        0 0 25px rgba(255,140,0,0.65),
+        inset 0 4px 8px rgba(255,255,255,0.45);
+
+      transition:0.2s ease;
+    }
+
+    .back-btn:hover{
+
+      transform:
+        translateX(-50%)
+        scale(1.08);
+    }
+
+    .back-btn:active{
+
+      transform:
+        translateX(-50%)
+        translateY(4px);
+    }
+
+    /* Responsive */
+    @media(max-width:900px){
+
+      .title h1{
+        font-size:48px;
+      }
+
+      .title h2{
+        font-size:30px;
+      }
+
+      .story-box{
+        padding:28px;
+      }
+
+      .story-box h3{
+        font-size:30px;
+      }
+
+      .narator,
+      .dialog{
+        font-size:21px;
+      }
+
+      .action{
+        font-size:18px;
+      }
+
+      .back-btn{
+        font-size:22px;
+        padding:14px 40px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Glow -->
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
+
+  <div class="container">
+
+    <!-- Title -->
+    <div class="title">
+
+     
+
+      <h2>“Ayo Jaga Kebersihan”</h2>
+
+    </div>
+
+    <!-- BAGIAN 1 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 1 – Pagi Hari Hujan</h3>
+
+      <p class="narator">
+        Pagi hari itu, hujan turun rintik-rintik.
+        Udara terasa dingin.
+        Arga dan Dita tetap bersiap berangkat ke sekolah.
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Dita… hujannya belum berhenti ya.
+        Aku jadi malas berangkat.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Hehe, tidak boleh malas, Arga.
+        Kita harus tetap semangat ke sekolah.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Iya sih… tapi jalannya pasti becek.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Iya, jadi kita harus hati-hati ya.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Baiklah! Ayo kita berangkat!”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 2 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 2 – Perjalanan ke Sekolah</h3>
+
+      <p class="narator">
+        Arga dan Dita berjalan bersama menuju sekolah.
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Ayo cepat, nanti kita terlambat!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Arga, pelan-pelan saja.
+        Jalannya licin.”
+      </p>
+
+      <p class="action">
+        (Arga hampir terpeleset)
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Wah! Hampir jatuh!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Nah kan… harus hati-hati.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Hehe, iya…
+        aku pelan-pelan saja sekarang.”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 3 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 3 – Tiba di Sekolah</h3>
+
+      <p class="narator">
+        Sesampainya di sekolah,
+        bel masuk berbunyi.
+        Arga dan Dita segera masuk ke kelas.
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 4 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 4 – Melihat Kelas Kotor</h3>
+
+      <p class="narator">
+        Saat masuk ke kelas,
+        mereka melihat lantai yang basah dan kotor.
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Arga, lihat! Lantainya kotor sekali.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Iya… banyak jejak air.”
+      </p>
+
+      <p class="action">
+        (Arga berjalan pelan)
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Eh… licin!”
+      </p>
+
+      <p class="action">
+        (Arga hampir jatuh lagi)
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Wah! Hampir jatuh lagi!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Kalau dibiarkan,
+        teman-teman bisa jatuh.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Iya ya… bisa bahaya.”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 5 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 5 – Diskusi</h3>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Kita bersihkan saja yuk.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Membersihkan kelas?”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Iya, supaya bersih dan tidak licin.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Baik! Aku mau bantu!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Kita bagi tugas ya.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Siap! Aku bersihkan lantai!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Aku bantu merapikan bagian lain.”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 6 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 6 – Mulai Membersihkan</h3>
+
+      <p class="narator">
+        Arga dan Dita mulai membersihkan kelas.
+      </p>
+
+      <p class="action">
+        (Mereka mulai mengelap lantai)
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Wah, airnya banyak sekali.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Iya, karena sepatu teman-teman basah.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Kalau tidak dibersihkan,
+        nanti teman jatuh ya?”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Iya, bisa terpeleset.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Aku harus membersihkan yang benar.”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 7 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 7 – Sedikit Lelah</h3>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Dita… capek juga ya.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Iya, tapi kalau bersama jadi ringan.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Iya, jadi cepat selesai juga.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Betul.”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 8 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 8 – Mengingatkan Teman</h3>
+
+      <p class="narator">
+        Saat masih membersihkan,
+        ada teman yang mau masuk kelas.
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Tunggu dulu!
+        Lantainya masih basah!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Hati-hati ya, nanti jatuh.”
+      </p>
+
+      <p class="narator">
+        Temannya pun menunggu.
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 9 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 9 – Kelas Bersih</h3>
+
+      <p class="narator">
+        Tidak lama kemudian,
+        kelas menjadi bersih.
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Sekarang kelas kita sudah bersih.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Iya! Tidak licin lagi.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Sekarang aman untuk belajar.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Dan juga nyaman!”
+      </p>
+
+    </div>
+
+    <!-- BAGIAN 10 -->
+    <div class="story-box">
+
+      <h3>BAGIAN 10 – Penutup</h3>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Teman-teman,
+        kita harus menjaga kebersihan ya!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Jangan buang sampah sembarangan.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Kalau kotor,
+        kita bersihkan bersama.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Supaya kita bisa belajar dengan nyaman.”
+      </p>
+
+    </div>
+
+    <!-- Moral -->
+    <div class="story-box moral">
+
+      <h3>Pesan Moral</h3>
+
+      <p class="narator">
+
+        Menjaga kebersihan adalah tanggung jawab kita bersama.
+
+        Meskipun dalam keadaan hujan atau kondisi apa pun,
+        kita tetap harus peduli terhadap lingkungan sekitar.
+
+        Jika kita membiarkan tempat menjadi kotor,
+        hal itu bisa membahayakan diri sendiri dan orang lain.
+
+        Oleh karena itu,
+        kita harus saling membantu dan bekerja sama agar lingkungan tetap bersih,
+        aman, dan nyaman untuk belajar.
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- Button -->
+  <button
+    class="back-btn"
+    onclick="window.location.href='../index.html'">
+
+    ⬅ KEMBALI
+
+  </button>
+
+</body>
+</html>
