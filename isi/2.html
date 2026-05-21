@@ -18,7 +18,6 @@
     }
 
     body{
-
       font-family:Arial, Helvetica, sans-serif;
 
       background:
@@ -33,11 +32,9 @@
       background-attachment:fixed;
 
       color:white;
-
       overflow-x:hidden;
     }
 
-    /* Glow Background */
     .blur{
       position:fixed;
       border-radius:50%;
@@ -63,88 +60,49 @@
       right:-120px;
     }
 
-    /* Container */
     .container{
-
       position:relative;
       z-index:2;
-
       width:92%;
       max-width:1300px;
-
       margin:auto;
-
-      padding:
-        50px
-        0
-        140px;
+      padding:50px 0 140px;
     }
 
-    /* Title */
     .title{
       text-align:center;
       margin-bottom:60px;
     }
 
-    .title h1{
-
-      font-size:68px;
-
-      color:#ffe66d;
-
-      text-shadow:
-        0 0 18px rgba(255,230,109,0.8),
-        0 0 35px rgba(255,230,109,0.5);
-
-      margin-bottom:15px;
-    }
-
     .title h2{
-
       font-size:42px;
-
       color:white;
-
-      text-shadow:
-        0 0 10px rgba(255,255,255,0.45);
+      text-shadow:0 0 10px rgba(255,255,255,0.45);
     }
 
-    /* Story Card */
     .story-box{
-
-      background:
-        rgba(255,255,255,0.10);
-
+      background:rgba(255,255,255,0.10);
       backdrop-filter:blur(10px);
 
-      border:
-        2px solid rgba(255,255,255,0.12);
+      border:2px solid rgba(255,255,255,0.12);
 
       border-radius:35px;
 
       padding:40px;
-
       margin-bottom:40px;
 
-      box-shadow:
-        0 0 25px rgba(0,0,0,0.35);
+      box-shadow:0 0 25px rgba(0,0,0,0.35);
 
       transition:0.25s ease;
     }
 
     .story-box:hover{
-
       transform:translateY(-6px);
-
-      box-shadow:
-        0 0 35px rgba(0,255,170,0.2);
+      box-shadow:0 0 35px rgba(0,255,170,0.2);
     }
 
-    /* Section Title */
     .story-box h3{
-
       font-size:38px;
-
       margin-bottom:25px;
 
       color:#7dff8d;
@@ -153,55 +111,42 @@
         0 0 12px rgba(125,255,141,0.55);
     }
 
-    /* Text */
+    .backsound{
+      font-size:22px;
+      color:#90caf9;
+      margin-bottom:20px;
+      font-style:italic;
+    }
+
     .narator{
-
       color:#ffe082;
-
       font-size:27px;
-
       line-height:1.9;
-
       margin-bottom:20px;
     }
 
     .dialog{
-
       font-size:27px;
-
       line-height:1.9;
-
       margin-left:18px;
       margin-bottom:18px;
-
       color:#ffffff;
     }
 
     .action{
-
       font-size:23px;
-
       color:#b0bec5;
-
       margin-left:35px;
       margin-bottom:18px;
-
       font-style:italic;
     }
 
-    /* Moral */
     .moral{
-
-      background:
-        rgba(255,215,0,0.10);
-
-      border:
-        2px solid rgba(255,215,0,0.25);
+      background:rgba(255,215,0,0.10);
+      border:2px solid rgba(255,215,0,0.25);
     }
 
-    /* Button */
     .back-btn{
-
       position:fixed;
 
       bottom:30px;
@@ -211,9 +156,7 @@
 
       z-index:10;
 
-      padding:
-        18px
-        55px;
+      padding:18px 55px;
 
       border:none;
       border-radius:18px;
@@ -242,25 +185,12 @@
     }
 
     .back-btn:hover{
-
       transform:
         translateX(-50%)
         scale(1.08);
     }
 
-    .back-btn:active{
-
-      transform:
-        translateX(-50%)
-        translateY(4px);
-    }
-
-    /* Responsive */
     @media(max-width:900px){
-
-      .title h1{
-        font-size:48px;
-      }
 
       .title h2{
         font-size:30px;
@@ -279,7 +209,8 @@
         font-size:21px;
       }
 
-      .action{
+      .action,
+      .backsound{
         font-size:18px;
       }
 
@@ -293,19 +224,13 @@
 </head>
 <body>
 
-  <!-- Glow -->
   <div class="blur blur1"></div>
   <div class="blur blur2"></div>
 
   <div class="container">
 
-    <!-- Title -->
     <div class="title">
-
-     
-
       <h2>“Ayo Jaga Kebersihan”</h2>
-
     </div>
 
     <!-- BAGIAN 1 -->
@@ -313,37 +238,44 @@
 
       <h3>BAGIAN 1 – Pagi Hari Hujan</h3>
 
+      <p class="backsound">
+        Backsound: suara hujan pelan
+      </p>
+
       <p class="narator">
-        Pagi hari itu, hujan turun rintik-rintik.
-        Udara terasa dingin.
-        Arga dan Dita tetap bersiap berangkat ke sekolah.
+        Pagi hari itu, langit terlihat mendung dan hujan turun rintik-rintik kecil.
+        Udara terasa dingin sekali.
+        Meskipun begitu, Arga dan Dita tetap bersiap-siap untuk berangkat ke sekolah seperti biasa.
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Dita… hujannya belum berhenti ya.
-        Aku jadi malas berangkat.”
+        “Dita… tadi hujan ya, sekarang sudah reda tapi udara masih dingin sekali.
+        Aku jadi agak malas berangkat ke sekolah.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
         “Hehe, tidak boleh malas, Arga.
-        Kita harus tetap semangat ke sekolah.”
+        Kita harus tetap semangat pergi ke sekolah.
+        Kita kan mau belajar bersama teman-teman.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Iya sih… tapi jalannya pasti becek.”
+        “Iya sih… tapi jalannya pasti becek dan licin karena tadi hujan.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Iya, jadi kita harus hati-hati ya.”
+        “Iya benar, jadi kita harus hati-hati saat berjalan supaya tidak terpeleset di jalan.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Baiklah! Ayo kita berangkat!”
+        “Baiklah kalau begitu!
+        Aku akan berjalan pelan-pelan.
+        Ayo kita berangkat ke sekolah!”
       </p>
 
     </div>
@@ -353,39 +285,46 @@
 
       <h3>BAGIAN 2 – Perjalanan ke Sekolah</h3>
 
+      <p class="backsound">
+        Backsound: hujan pelan + langkah kaki
+      </p>
+
       <p class="narator">
-        Arga dan Dita berjalan bersama menuju sekolah.
+        Arga dan Dita berjalan bersama menuju sekolah melewati jalan yang masih basah bekas hujan.
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Ayo cepat, nanti kita terlambat!”
+        “Ayo Dita, kita jalan agak cepat ya,
+        nanti kita bisa terlambat masuk kelas.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Arga, pelan-pelan saja.
-        Jalannya licin.”
+        “Arga, jangan terlalu cepat.
+        Jalannya licin karena hujan.
+        Kita harus pelan-pelan supaya tidak jatuh.”
       </p>
 
-      <p class="action">
-        (Arga hampir terpeleset)
+      <p class="narator">
+        Tiba-tiba Arga hampir terpeleset karena menginjak jalan yang basah.
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Wah! Hampir jatuh!”
+        “Wah! Hampir saja aku jatuh!”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Nah kan… harus hati-hati.”
+        “Nah kan… makanya harus hati-hati.
+        Kalau terburu-buru bisa berbahaya.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Hehe, iya…
-        aku pelan-pelan saja sekarang.”
+        “Hehe, iya Dita,
+        aku sekarang jalan pelan-pelan saja.”
       </p>
 
     </div>
@@ -395,10 +334,23 @@
 
       <h3>BAGIAN 3 – Tiba di Sekolah</h3>
 
+      <p class="backsound">
+        Backsound: bel sekolah singkat
+      </p>
+
       <p class="narator">
-        Sesampainya di sekolah,
-        bel masuk berbunyi.
-        Arga dan Dita segera masuk ke kelas.
+        Setelah berjalan cukup jauh, akhirnya Arga dan Dita sampai di sekolah.
+        Tidak lama kemudian, bel masuk kelas berbunyi.
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Wah, kita tepat waktu juga ya!”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Iya, sekarang kita langsung masuk kelas supaya tidak terlambat.”
       </p>
 
     </div>
@@ -408,48 +360,45 @@
 
       <h3>BAGIAN 4 – Melihat Kelas Kotor</h3>
 
+      <p class="backsound">
+        Backsound: hening
+      </p>
+
       <p class="narator">
-        Saat masuk ke kelas,
-        mereka melihat lantai yang basah dan kotor.
+        Saat Arga dan Dita masuk ke kelas,
+        mereka melihat lantai kelas yang basah dan kotor karena air hujan dari sepatu teman-teman.
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Arga, lihat! Lantainya kotor sekali.”
+        “Arga, coba lihat!
+        Lantai kelas kita kotor sekali dan banyak airnya.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Iya… banyak jejak air.”
+        “Iya benar, banyak sekali jejak kaki basah di lantai.”
       </p>
 
-      <p class="action">
-        (Arga berjalan pelan)
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Eh… licin!”
-      </p>
-
-      <p class="action">
-        (Arga hampir jatuh lagi)
+      <p class="narator">
+        Arga berjalan pelan, tetapi hampir terpeleset lagi.
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Wah! Hampir jatuh lagi!”
+        “Wah! Aku hampir jatuh lagi!”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Kalau dibiarkan,
-        teman-teman bisa jatuh.”
+        “Kalau kelas dibiarkan seperti ini,
+        nanti teman-teman lain juga bisa terpeleset dan jatuh.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Iya ya… bisa bahaya.”
+        “Iya ya, itu bisa berbahaya.
+        Kita harus melakukan sesuatu.”
       </p>
 
     </div>
@@ -457,41 +406,47 @@
     <!-- BAGIAN 5 -->
     <div class="story-box">
 
-      <h3>BAGIAN 5 – Diskusi</h3>
+      <h3>BAGIAN 5 – Diskusi Membersihkan Kelas</h3>
+
+      <p class="backsound">
+        Backsound: pelan
+      </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Kita bersihkan saja yuk.”
+        “Bagaimana kalau kita bersihkan kelas ini bersama-sama?”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Membersihkan kelas?”
+        “Kita bersihkan sendiri?
+        Memang bisa?”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Iya, supaya bersih dan tidak licin.”
+        “Tentu bisa.
+        Kalau kita bekerja sama,
+        pekerjaan akan menjadi lebih ringan dan cepat selesai.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Baik! Aku mau bantu!”
+        “Baiklah!
+        Aku setuju.
+        Aku mau membantu membersihkan lantai.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Kita bagi tugas ya.”
+        “Kalau begitu kita bagi tugas ya.
+        Aku akan merapikan meja dan kursi.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Siap! Aku bersihkan lantai!”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Aku bantu merapikan bagian lain.”
+        “Siap!
+        Aku akan mengelap lantai supaya tidak licin lagi.”
       </p>
 
     </div>
@@ -501,38 +456,40 @@
 
       <h3>BAGIAN 6 – Mulai Membersihkan</h3>
 
-      <p class="narator">
-        Arga dan Dita mulai membersihkan kelas.
+      <p class="backsound">
+        Backsound: musik ringan semangat
       </p>
 
-      <p class="action">
-        (Mereka mulai mengelap lantai)
+      <p class="narator">
+        Arga dan Dita mulai membersihkan kelas dengan semangat.
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Wah, airnya banyak sekali.”
+        “Wah, air di lantai ini cukup banyak ya.
+        Harus segera dibersihkan supaya tidak membahayakan.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Iya, karena sepatu teman-teman basah.”
+        “Iya apalagi sepatu teman-teman tadi basah karena hujan.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
         “Kalau tidak dibersihkan,
-        nanti teman jatuh ya?”
+        nanti teman-teman bisa terpeleset dan jatuh.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Iya, bisa terpeleset.”
+        “Betul sekali.
+        Karena itu kita harus menjaga kebersihan kelas bersama-sama.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Aku harus membersihkan yang benar.”
+        “Aku akan membersihkan dengan lebih teliti supaya lantainya benar-benar kering.”
       </p>
 
     </div>
@@ -542,24 +499,32 @@
 
       <h3>BAGIAN 7 – Sedikit Lelah</h3>
 
-      <p class="dialog">
-        <b>Arga:</b>
-        “Dita… capek juga ya.”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Iya, tapi kalau bersama jadi ringan.”
+      <p class="backsound">
+        Backsound: tetap ringan
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Iya, jadi cepat selesai juga.”
+        “Dita… aku mulai capek juga ya membersihkan kelas.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Betul.”
+        “Iya, memang agak capek.
+        Tapi kalau kita kerja bersama,
+        semuanya terasa lebih ringan.”
+      </p>
+
+      <p class="dialog">
+        <b>Arga:</b>
+        “Iya benar,
+        kalau bersama teman jadi lebih semangat.”
+      </p>
+
+      <p class="dialog">
+        <b>Dita:</b>
+        “Sebentar lagi juga selesai,
+        jadi tetap semangat ya.”
       </p>
 
     </div>
@@ -569,9 +534,13 @@
 
       <h3>BAGIAN 8 – Mengingatkan Teman</h3>
 
+      <p class="backsound">
+        Backsound: pelan
+      </p>
+
       <p class="narator">
-        Saat masih membersihkan,
-        ada teman yang mau masuk kelas.
+        Saat mereka masih membersihkan kelas,
+        ada teman yang ingin masuk ke kelas tanpa melihat kondisi lantai.
       </p>
 
       <p class="dialog">
@@ -582,11 +551,12 @@
 
       <p class="dialog">
         <b>Dita:</b>
-        “Hati-hati ya, nanti jatuh.”
+        “Iya, hati-hati ya teman-teman.
+        Nanti bisa terpeleset kalau langsung masuk.”
       </p>
 
       <p class="narator">
-        Temannya pun menunggu.
+        Teman mereka pun berhenti dan menunggu sampai lantai aman.
       </p>
 
     </div>
@@ -596,88 +566,113 @@
 
       <h3>BAGIAN 9 – Kelas Bersih</h3>
 
+      <p class="backsound">
+        Backsound: musik ceria
+      </p>
+
       <p class="narator">
-        Tidak lama kemudian,
-        kelas menjadi bersih.
+        Setelah beberapa saat,
+        akhirnya kelas menjadi bersih dan rapi kembali.
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Sekarang kelas kita sudah bersih.”
+        “Alhamdulillah,
+        sekarang kelas kita sudah bersih dan rapi.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Iya! Tidak licin lagi.”
+        “Iya,
+        lantainya juga sudah tidak licin lagi.”
       </p>
 
       <p class="dialog">
         <b>Dita:</b>
-        “Sekarang aman untuk belajar.”
+        “Sekarang kita bisa belajar dengan nyaman.”
       </p>
 
       <p class="dialog">
         <b>Arga:</b>
-        “Dan juga nyaman!”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 10 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 10 – Penutup</h3>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Teman-teman,
-        kita harus menjaga kebersihan ya!”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Jangan buang sampah sembarangan.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Kalau kotor,
-        kita bersihkan bersama.”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Supaya kita bisa belajar dengan nyaman.”
+        “Dan juga lebih aman untuk semua teman.”
       </p>
 
     </div>
 
     <!-- Moral -->
-    <div class="story-box moral">
+   <!-- BAGIAN 10 -->
+<div class="story-box">
 
-      <h3>Pesan Moral</h3>
+  <h3>BAGIAN 10 – Penutup</h3>
 
-      <p class="narator">
+  <p class="backsound">
+    Backsound: musik penutup pelan
+  </p>
 
-        Menjaga kebersihan adalah tanggung jawab kita bersama.
+  <p class="dialog">
+    <b>Arga:</b>
+    “Teman-teman, kita harus selalu menjaga kebersihan di mana pun kita berada,
+    terutama di kelas.”
+  </p>
 
-        Meskipun dalam keadaan hujan atau kondisi apa pun,
-        kita tetap harus peduli terhadap lingkungan sekitar.
+  <p class="dialog">
+    <b>Dita:</b>
+    “Jangan membuang sampah sembarangan dan selalu menjaga lingkungan tetap bersih.”
+  </p>
 
-        Jika kita membiarkan tempat menjadi kotor,
-        hal itu bisa membahayakan diri sendiri dan orang lain.
+  <p class="dialog">
+    <b>Arga:</b>
+    “Kalau kelas kotor, kita bisa bekerja sama untuk membersihkannya.”
+  </p>
 
-        Oleh karena itu,
-        kita harus saling membantu dan bekerja sama agar lingkungan tetap bersih,
-        aman, dan nyaman untuk belajar.
+  <p class="dialog">
+    <b>Dita:</b>
+    “Supaya kita bisa belajar dengan nyaman, aman, dan menyenangkan.”
+  </p>
 
-      </p>
+</div>
 
-    </div>
+<!-- NARATOR PENUTUP -->
+<div class="story-box">
 
+  <h3>NARATOR (PENUTUP)</h3>
+
+  <p class="narator">
+    Walaupun pagi itu hujan sudah reda dan kondisi jalan masih basah,
+    Arga dan Dita tetap menunjukkan sikap peduli terhadap kebersihan kelas.
+
+    Mereka bekerja sama dengan penuh semangat sampai kelas menjadi bersih,
+    rapi, dan aman.
+
+    Dari cerita ini kita belajar bahwa menjaga kebersihan adalah tanggung jawab semua orang.
+  </p>
+
+</div>
+
+<!-- PESAN MORAL -->
+<div class="story-box moral">
+
+  <h3>Pesan Moral</h3>
+
+  <p class="narator">
+
+    Menjaga kebersihan adalah tanggung jawab kita bersama.
+
+    Meskipun dalam keadaan hujan atau kondisi apa pun,
+    kita tetap harus peduli terhadap lingkungan sekitar.
+
+    Jika kita membiarkan tempat menjadi kotor,
+    hal itu bisa membahayakan diri sendiri dan orang lain.
+
+    Oleh karena itu,
+    kita harus saling membantu dan bekerja sama agar lingkungan tetap bersih,
+    aman, dan nyaman untuk belajar.
+
+  </p>
+
+</div>
   </div>
 
-  <!-- Button -->
   <button
     class="back-btn"
     onclick="window.location.href='../index.html'">
