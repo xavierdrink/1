@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahasia Gigi Bersih dan Nafas Segar</title>
+<title>Audio Background</title>
 
 <style>
 
@@ -14,64 +14,33 @@ font-family:Arial, Helvetica, sans-serif;
 background:black;
 }
 
-#stage{
-width:100vw;
-height:100vh;
-background-image:url('../assets/bg/5.png');
-background-size:cover;
-background-position:center;
-position:relative;
+.background{
+position:fixed;
+inset:0;
+background:url('../assets/bg/5.png') center center/cover no-repeat;
 }
 
 .overlay{
-position:absolute;
+position:fixed;
 inset:0;
 background:rgba(0,0,0,.35);
 }
 
-.textbox{
-position:absolute;
-bottom:120px;
-left:50%;
-transform:translateX(-50%);
-width:88%;
-max-width:1200px;
-
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(10px);
-
-padding:30px;
-border-radius:28px;
-
-color:white;
-
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-.judul{
-font-size:34px;
-font-weight:bold;
-color:#ffe066;
-margin-bottom:15px;
-text-shadow:0 0 10px rgba(255,224,102,.5);
-}
-
-.teks{
-font-size:28px;
-line-height:1.8;
-}
-
 .controls{
 position:fixed;
-bottom:20px;
+bottom:25px;
 left:50%;
 transform:translateX(-50%);
+
 display:flex;
 gap:15px;
-background:rgba(255,255,255,.2);
-padding:14px 18px;
+
+padding:15px 20px;
+
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+
 border-radius:30px;
-backdrop-filter:blur(8px);
 z-index:10;
 }
 
@@ -79,11 +48,13 @@ button,a{
 padding:14px 22px;
 border:none;
 border-radius:20px;
-font-weight:bold;
-text-decoration:none;
-cursor:pointer;
-color:white;
+
 font-size:18px;
+font-weight:bold;
+
+cursor:pointer;
+text-decoration:none;
+color:white;
 }
 
 .play{
@@ -94,45 +65,24 @@ background:#51cf66;
 background:#fab005;
 }
 
+.restart{
+background:#845ef7;
+}
+
 .back{
 background:#ff6b6b;
 }
 
-.start{
-position:fixed;
-inset:0;
-display:flex;
-justify-content:center;
-align-items:center;
-background:rgba(0,0,0,.5);
-z-index:20;
-}
-
-.start button{
-font-size:32px;
-padding:22px 40px;
-background:#51cf66;
-}
-
-@media(max-width:900px){
-
-.textbox{
-bottom:110px;
-padding:22px;
-}
-
-.judul{
-font-size:25px;
-}
-
-.teks{
-font-size:19px;
-line-height:1.7;
-}
+@media(max-width:700px){
 
 button,a{
 font-size:15px;
 padding:10px 14px;
+}
+
+.controls{
+gap:10px;
+padding:12px 14px;
 }
 
 }
@@ -141,29 +91,8 @@ padding:10px 14px;
 </head>
 <body>
 
-<div id="stage">
-
+<div class="background"></div>
 <div class="overlay"></div>
-
-<div class="textbox">
-
-<div class="judul">
-Rahasia Gigi Bersih dan Nafas Segar
-</div>
-
-<div class="teks">
-Di pagi hari yang cerah, Arga dan Dita sedang belajar di kelas bersama Bu Devy.
-Hari ini mereka belajar tentang pentingnya menjaga kebersihan gigi agar napas tetap segar,
-gigi tetap sehat, dan teman-teman merasa nyaman saat berbicara bersama kita.
-</div>
-
-</div>
-
-</div>
-
-<div class="start" id="start">
-<button onclick="mulai()">▶ Mulai Cerita</button>
-</div>
 
 <div class="controls">
 
@@ -185,18 +114,11 @@ gigi tetap sehat, dan teman-teman merasa nyaman saat berbicara bersama kita.
 
 </div>
 
-<audio id="audio" src="../assets/narator.mp3"></audio>
+<audio id="audio" src="../assets/bg/narator.mp3"></audio>
 
 <script>
 
 const audio=document.getElementById("audio");
-
-function mulai(){
-
-document.getElementById("start").style.display="none";
-audio.play();
-
-}
 
 function playAudio(){
 
@@ -210,8 +132,14 @@ audio.pause();
 
 }
 
+function restartAudio(){
+
+audio.currentTime=0;
+audio.play();
+
+}
+
 </script>
 
 </body>
 </html>
-```
