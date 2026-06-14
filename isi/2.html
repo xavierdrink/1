@@ -1,10 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR STORY 1 - Rahasia Gigi Bersih dan Nafas Segar</title>
+  <title>CERITA QR STORY 1 - Rahasia Gigi Bersih dan Nafas Segar</title>
 
   <style>
 
@@ -23,8 +22,8 @@
 
       background:
         linear-gradient(
-          rgba(0,0,0,0.55),
-          rgba(0,0,0,0.75)
+          rgba(0,0,0,0.65),
+          rgba(0,0,0,0.80)
         ),
         url('../assets/Background.jpeg');
 
@@ -32,570 +31,155 @@
       background-position:center;
       background-attachment:fixed;
 
-      color:white;
+      color:#f5f5f5;
       overflow-x:hidden;
-    }
-
-    .blur{
-      position:fixed;
-      border-radius:50%;
-      filter:blur(120px);
-      opacity:0.35;
-      z-index:0;
-      pointer-events:none;
-    }
-
-    .blur1{
-      width:350px;
-      height:350px;
-      background:#00ffaa;
-      top:-100px;
-      left:-100px;
-    }
-
-    .blur2{
-      width:420px;
-      height:420px;
-      background:#00cfff;
-      bottom:-120px;
-      right:-120px;
     }
 
     .container{
       position:relative;
       z-index:2;
       width:92%;
-      max-width:1300px;
+      max-width:1100px;
       margin:auto;
-      padding:50px 0 140px;
+      padding:50px 0 120px;
     }
 
     .title{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:50px;
     }
 
     .title h2{
-      font-size:42px;
-      color:white;
-      text-shadow:0 0 10px rgba(255,255,255,0.45);
-      margin-bottom:15px;
+      font-size:38px;
+      color:#ffffff;
+      text-shadow:0 0 8px rgba(0,0,0,0.6);
+      margin-bottom:10px;
     }
 
     .title h3{
-      font-size:32px;
-      color:#ffe082;
+      font-size:28px;
+      color:#ffd166;
     }
 
     .story-box{
       background:rgba(255,255,255,0.10);
-      backdrop-filter:blur(10px);
-
-      border:2px solid rgba(255,255,255,0.12);
-
-      border-radius:35px;
-
-      padding:40px;
-      margin-bottom:40px;
-
-      box-shadow:0 0 25px rgba(0,0,0,0.35);
-
-      transition:0.25s ease;
-    }
-
-    .story-box:hover{
-      transform:translateY(-6px);
-      box-shadow:0 0 35px rgba(0,255,170,0.2);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:25px;
+      padding:30px;
+      margin-bottom:25px;
+      backdrop-filter:blur(8px);
+      box-shadow:0 5px 20px rgba(0,0,0,0.35);
     }
 
     .story-box h3{
-      font-size:38px;
-      margin-bottom:25px;
-
-      color:#7dff8d;
-
-      text-shadow:
-        0 0 12px rgba(125,255,141,0.55);
+      font-size:26px;
+      margin-bottom:15px;
+      color:#7ee787;
     }
 
-    .narator{
-      color:#ffe082;
-      font-size:27px;
+    .text{
+      font-size:20px;
       line-height:1.9;
-      margin-bottom:20px;
+      color:#f1f1f1;
     }
 
-    .dialog{
-      font-size:27px;
-      line-height:1.9;
-      margin-left:18px;
-      margin-bottom:18px;
+    .text b{
       color:#ffffff;
-    }
-
-    .moral{
-      background:rgba(255,215,0,0.10);
-      border:2px solid rgba(255,215,0,0.25);
     }
 
     .back-btn{
       position:fixed;
-
-      bottom:30px;
+      bottom:25px;
       left:50%;
-
       transform:translateX(-50%);
-
       z-index:10;
 
-      padding:18px 55px;
-
+      padding:16px 45px;
       border:none;
-      border-radius:18px;
+      border-radius:15px;
 
-      font-size:28px;
+      font-size:24px;
       font-weight:bold;
-
       color:white;
-
       cursor:pointer;
 
-      background:
-        linear-gradient(
-          to bottom,
-          #ffb347 0%,
-          #ff8c00 45%,
-          #cc6500 100%
-        );
-
-      box-shadow:
-        0 7px 0 #8f4300,
-        0 0 25px rgba(255,140,0,0.65),
-        inset 0 4px 8px rgba(255,255,255,0.45);
-
-      transition:0.2s ease;
-    }
-
-    .back-btn:hover{
-      transform:
-        translateX(-50%)
-        scale(1.08);
-    }
-
-    @media(max-width:900px){
-
-      .title h2{
-        font-size:30px;
-      }
-
-      .title h3{
-        font-size:24px;
-      }
-
-      .story-box{
-        padding:28px;
-      }
-
-      .story-box h3{
-        font-size:30px;
-      }
-
-      .narator,
-      .dialog{
-        font-size:21px;
-      }
-
-      .back-btn{
-        font-size:22px;
-        padding:14px 40px;
-      }
+      background:linear-gradient(to bottom,#ffb703,#fb8500,#d97706);
+      box-shadow:0 6px 0 #7a3e00,0 0 20px rgba(255,140,0,0.4);
     }
 
   </style>
 </head>
+
 <body>
 
-  <div class="blur blur1"></div>
-  <div class="blur blur2"></div>
-
-  <div class="container">
-
-    <div class="title">
-      <h2>“Tema Kebersihan”</h2>
-      <h3>Judul : Rahasia Gigi Bersih dan Nafas Segar</h3>
-    </div>
-
-    <!-- BAGIAN 1 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 1 – Pagi Hari di Kelas</h3>
-
-      <p class="narator">
-        Di pagi hari yang cerah, burung-burung berkicau dengan riang.
-        Arga dan Dita duduk di bangku masing-masing.
-        Tiba-tiba Arga menguap sangat lebar.
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Selamat pagi, anak-anak. Hari ini kita akan belajar tentang kebersihan diri.
-        Coba sebutkan, apa saja yang harus kalian lakukan setiap pagi sebelum berangkat sekolah?”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Saya mandi, Bu Devy.
-        Lalu gosok gigi, pakai seragam yang rapi, dan sarapan.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Bagus sekali, Dita.
-        Arga, bagaimana denganmu?
-        Apa yang kamu lakukan pagi ini sebelum ke sekolah?”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Saya... saya bangun kesiangan, Bu.
-        Jadi saya langsung pakai baju dan lari ke sekolah.
-        Tidak sempat mandi.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 2 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 2 – Arga Lupa Gosok Gigi</h3>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Lho, kalau tidak mandi, badanmu bisa bau, Arga.
-        Apakah kamu setidaknya menggosok gigi?”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Eee... gosok gigi?
-        Saya lupa, Bu.
-        Saya hanya berkumur dengan air minum dari botol.”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Bu Devy, saya bisa mencium bau napas Arga dari sini.
-        Wanginya seperti bawang putih dan ikan asin.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Ah, Dita, lebay kamu.
-        Aku tadi makan roti isi bawang, sih.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Arga, kalau kamu makan bawang dan tidak menggosok gigi,
-        napasmu akan menjadi tidak sedap.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 3 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 3 – Pentingnya Menyikat Gigi</h3>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Tapi Bu, bukankah gigi saya sudah bersih karena saya berkumur air putih?”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Hahaha... Arga, kalau hanya berkumur,
-        sisa makanan yang menempel di sela-sela gigimu tidak akan hilang.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Dita benar.
-        Sikat gigi dengan pasta gigi yang mengandung fluorida
-        dapat membersihkan plak dan sisa makanan.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Coba bayangkan,
-        jika kamu tidak pernah menyikat piring setelah makan,
-        apakah piring itu bersih hanya dengan dibilas air?”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Tidak bersih, Bu.
-        Masih ada noda minyaknya.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Nah, sama seperti gigimu.
-        Sisa makanan yang tidak dibersihkan akan menjadi sarang kuman.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 4 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 4 – Cara Menyikat Gigi yang Benar</h3>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Aduh, saya tidak mau sakit gigi.
-        Lalu bagaimana cara menyikat gigi yang benar, Bu?”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Saya tahu, Bu Devy!
-        Harus disikat bagian depan, belakang,
-        dan permukaan gigi yang digunakan untuk mengunyah.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Pintar, Dita.
-        Tapi jangan lupa menyikat lidah juga,
-        karena lidah bisa menyimpan kuman penyebab bau napas.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Saya biasanya menyikat gigi cepat sekali,
-        hanya lima detik.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Wah, lima detik terlalu singkat.
-        Waktu yang ideal adalah dua menit.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 5 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 5 – Waktu Menyikat Gigi</h3>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Kalau malas menghitung,
-        nyanyikan lagu favoritmu supaya lebih semangat.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Baiklah, mulai besok saya akan sikat gigi selama dua menit.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Tapi Bu Devy,
-        kapan saja sebenarnya kita harus menyikat gigi?”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Minimal dua kali sehari:
-        pagi setelah sarapan dan malam sebelum tidur.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Kenapa malam hari harus gosok gigi juga, Bu?”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Karena saat tidur,
-        kuman bisa berkembang biak di mulutmu.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 6 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 6 – Bahaya Permen dan Gula</h3>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Kalau kamu makan makanan manis seperti permen,
-        sebaiknya berkumur atau sikat gigi.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Saya suka sekali makan permen rasa stroberi.
-        Tapi saya tidak pernah sikat gigi setelahnya.”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Dijilat-jilat giginya juga tidak membantu, Arga.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Kalau gigimu berlubang,
-        kamu harus pergi ke dokter gigi.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Dokter gigi akan memakai alat berbunyi
-        drrrrr... drrrrr...”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Aduh, saya takut!
-        Baiklah, mulai sekarang saya akan rajin sikat gigi.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 7 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 7 – Mengganti Sikat Gigi</h3>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Arga juga harus mengganti sikat giginya setiap tiga bulan sekali.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Wah, saya baru tahu.
-        Sikat gigi saya sudah enam bulan tidak diganti.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Astaga, Arga.
-        Itu sudah terlalu lama.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Malam ini saya akan meminta ibu membelikan sikat gigi baru.”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Jangan lupa pilih pasta gigi yang mengandung fluorida.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Siap!
-        Saya mau yang rasa stroberi.”
-      </p>
-
-    </div>
-
-    <!-- BAGIAN 8 -->
-    <div class="story-box">
-
-      <h3>BAGIAN 8 – Janji Arga</h3>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Nah, sekarang Arga sudah tahu cara menjaga kebersihan gigi.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Mulai besok,
-        saya akan sikat gigi setiap pagi setelah sarapan
-        dan setiap malam sebelum tidur.”
-      </p>
-
-      <p class="dialog">
-        <b>Dita:</b>
-        “Bagus!
-        Kalau tidak,
-        nanti saya bilang ke teman-teman bahwa napasmu bau petai.”
-      </p>
-
-      <p class="dialog">
-        <b>Arga:</b>
-        “Aduh jangan, Dita!
-        Aku janji akan rajin sikat gigi.”
-      </p>
-
-      <p class="dialog">
-        <b>Bu Devy:</b>
-        “Bagus sekali.
-        Gigi bersih membuat kita sehat dan percaya diri.”
-      </p>
-
-    </div>
-
-    <!-- NARATOR PENUTUP -->
-    <div class="story-box">
-
-      <h3>NARATOR (PENUTUP)</h3>
-
-      <p class="narator">
-        Setelah mendengarkan penjelasan Bu Devy,
-        Arga akhirnya memahami pentingnya menjaga kebersihan gigi.
-
-        Ia belajar bahwa menyikat gigi bukan hanya membuat napas segar,
-        tetapi juga menjaga kesehatan tubuh dan membuat teman-teman nyaman saat berbicara.
-
-        Dita juga mengajarkan bahwa mengingatkan teman harus dilakukan dengan cara yang baik dan menyenangkan.
-      </p>
-
-    </div>
-
-    <!-- PESAN MORAL -->
-    <div class="story-box moral">
-
-      <h3>Pesan Moral</h3>
-
-      <p class="narator">
-
-        Kebersihan gigi sangat penting untuk menjaga kesehatan tubuh
-        dan membuat kita nyaman saat beraktivitas.
-
-        Kita harus membiasakan menyikat gigi dua kali sehari,
-        yaitu setelah sarapan dan sebelum tidur.
-
-        Selain itu,
-        kita juga perlu mengganti sikat gigi secara rutin
-        dan saling mengingatkan teman dengan cara yang baik.
-
-        Kebiasaan kecil menjaga kebersihan dapat memberikan manfaat besar bagi kesehatan.
-
-      </p>
-
-    </div>
-
+<div class="container">
+
+  <div class="title">
+    <h2>CERITA QR STORY 1</h2>
+    <h3>Rahasia Gigi Bersih dan Nafas Segar</h3>
   </div>
 
-  <button
-    class="back-btn"
-    onclick="window.location.href='../index.html'">
+  <!-- CERITA -->
+  <div class="story-box">
+    <h3>Cerita</h3>
 
-    ⬅ KEMBALI
+    <div class="text">
 
-  </button>
+      Pada pagi hari yang cerah, burung-burung berkicau dengan riang di sekitar sekolah. 
+      Arga dan Dita duduk di bangku masing-masing sambil menunggu pelajaran dimulai. 
+      Tiba-tiba Arga menguap sangat lebar.<br><br>
+
+      Tidak lama kemudian, Bu Devy masuk ke dalam kelas dan menyapa seluruh siswa. 
+      "Selamat pagi, anak-anak. Hari ini kita akan belajar tentang kebersihan diri. 
+      Coba sebutkan, apa saja yang harus kalian lakukan setiap pagi sebelum berangkat sekolah?"<br><br>
+
+      Dita menjawab, 
+      "Saya mandi, gosok gigi, memakai seragam yang rapi, dan sarapan."<br><br>
+
+      Guru memuji jawaban Dita. Lalu bertanya kepada Arga tentang kegiatannya pagi itu.<br><br>
+
+      Arga menjawab dengan malu, 
+      "Saya bangun kesiangan, jadi langsung berangkat sekolah tanpa mandi."<br><br>
+
+      Guru terkejut dan menanyakan apakah Arga menggosok gigi.<br><br>
+
+      Arga menjawab, 
+      "Saya lupa, saya hanya berkumur dengan air minum."<br><br>
+
+      Dita berkata bahwa napas Arga tidak sedap.<br><br>
+
+      Guru menjelaskan bahwa tidak menggosok gigi dapat membuat sisa makanan menumpuk dan menyebabkan bau tidak sedap. 
+      Pasta gigi dengan fluorida membantu membersihkan plak dan kuman.<br><br>
+
+      Guru memberi contoh bahwa seperti piring kotor yang hanya dibilas air tidak akan bersih.<br><br>
+
+      Arga akhirnya memahami bahwa gigi perlu disikat, bukan hanya dibilas air.<br><br>
+
+      Dita menjelaskan bahwa gigi harus disikat pada bagian depan, belakang, dan permukaan kunyah.<br><br>
+
+      Guru menambahkan bahwa lidah juga harus dibersihkan agar tidak menjadi tempat kuman berkembang.<br><br>
+
+      Arga mulai mengerti dan berjanji akan lebih rajin menjaga kebersihan gigi setiap hari.
+
+    </div>
+  </div>
+
+  <!-- PESAN MORAL -->
+  <div class="story-box">
+    <h3>Pesan Moral</h3>
+
+    <div class="text">
+      Kebersihan gigi sangat penting untuk menjaga kesehatan tubuh dan membuat kita nyaman saat beraktivitas. 
+      Kita harus membiasakan menyikat gigi dua kali sehari, yaitu setelah sarapan di pagi hari dan sebelum tidur di malam hari, 
+      agar sisa makanan dan kuman tidak menumpuk di gigi.
+    </div>
+  </div>
+
+</div>
+
+<button class="back-btn" onclick="window.location.href='../index.html'">
+  ⬅ KEMBALI
+</button>
 
 </body>
 </html>
-```
